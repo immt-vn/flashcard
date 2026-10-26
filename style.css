@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    background-color: aliceblue;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding: clamp(24px, 3vw, 48px);
+}
+
+.container > section {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: clamp(32px, 4vw, 64px);
+    box-shadow: 0 0 10px 3px #c0c3c7;
+    font-size: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.container > section:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+.container > .container2 {
+    background: linear-gradient(to bottom, #2563EB, #1E3A8A);
+    color: #f1f1f1;
+    border-radius: 0 20px 20px 0;
+}
+
+.container > .container2 h1 {
+    margin: 0 0 12px;
+}
+
+.container > .container2 p {
+    margin: 0;
+}
+
+.sign-in {
+    margin: 0;
+    color: #5c5f65;
+}
+
+.login-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.login-form > label:not(.remember) {
+    margin-top: 4px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form button {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    border: 1px solid #c8cdd4;
+    background-color: #fff;
+}
+
+.login-form input:focus {
+    outline: 2px solid #2562ea;
+    outline-offset: 2px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.remember input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.login-form button {
+    border: 0;
+    font-size: large;
+    font-weight: bold;
+    background-color: #2562ea;
+    color: #fefefe;
+    cursor: pointer;
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.login-form button:hover {
+    box-shadow: 0 4px 12px 2px #aab7cc;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container > section {
+        flex: 0 0 auto;
+        padding: 36px 28px;
+    }
+
+    .container > section:first-child {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .container > .container2 {
+        min-height: 240px;
+        border-radius: 0 0 20px 20px;
+    }
+}
